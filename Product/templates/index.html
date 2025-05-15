@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>Budget Tracker</title></head>
+<body>
+  <h1>Budget Entries</h1>
+  <table border="1">
+    <tr><th>Amount</th><th>Category</th><th>Description</th></tr>
+    {% for entry in entries %}
+    <tr>
+      <td>{{ entry.amount }}</td>
+      <td>{{ entry.category }}</td>
+      <td>{{ entry.description }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/add">Add New Entry</a>
+</body>
+</html>
